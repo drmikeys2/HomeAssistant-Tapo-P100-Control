@@ -8,11 +8,17 @@ To install the Tapo P100 integration copy the `tapo_p100_control` folder into th
 ```yaml
 
 #P100 or P105 Plug
+#Example shows how to add multiple plugs
 switch:
-    platform: tapo_p100_control
-    ip_address: 192.168.x.x
+  - platform: tapo_p100_control
+    ip_address: 192.168.x.10
     email: email@gmail.com
-    password: Password123
+    password: some_password
+    
+  - platform: tapo_p100_control
+    ip_address: 192.168.x.11
+    email: email@gmail.com
+    password: some_password
     
 #L510 Series Bulbs
 light:
@@ -21,6 +27,9 @@ light:
     email: email@gmail.com
     password: Password123
 ```
+
+### Using in automations
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change
